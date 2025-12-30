@@ -62,8 +62,6 @@ public static long part2() throws IOException {
         nums = new char[12];
         startIndex = 0;
 
-        System.out.println(line);
-
         for (int i=0; i<12; i++) {
 
             for (int j=0; j<line.length()-(11-i); j++) {
@@ -77,18 +75,14 @@ public static long part2() throws IOException {
 
             line = line.substring(startIndex+1);
 
-//            System.out.println();
-
         }
 
-        String totalString = "";
+        String lineValue = "";
         for (char num: nums) {
-
-            totalString += num;
-
+            lineValue += num;
         }
 
-        total += Long.parseLong(totalString);
+        total += Long.parseLong(lineValue);
 
         line = f.readLine();
 
