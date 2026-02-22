@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-
 void main() throws IOException {
 
     BufferedReader f = new BufferedReader(new FileReader("input"));
@@ -22,8 +20,6 @@ void main() throws IOException {
         nums.add(Long.parseLong(line));
         line = f.readLine();
     }
-
-    long max = Collections.max(nums);
 
     System.out.println("Part 1: " + part1(nums, ranges));
     System.out.println("Part 2: " + part2(ranges));
@@ -68,10 +64,6 @@ long part2(ArrayList<long[]> ranges) {
             i++;
         }
         j++;
-    }
-
-    for (long[] range : newRanges) {
-        System.out.println(range[0] + " " + range[1]);
     }
 
     for (long[] range : newRanges) {
